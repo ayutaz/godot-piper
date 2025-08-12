@@ -154,7 +154,7 @@ GDExtensionのWebAssembly制限を回避するため、JavaScriptブリッジを
 
 - **コンパイラ**
   - C++17対応必須
-  - Windows: MSVC 2019+
+  - Windows: MSVC 2022+ (Visual Studio 2022以上)
   - Linux: GCC 9+
   - macOS: Clang 12+
   

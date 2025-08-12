@@ -71,7 +71,7 @@ func _ready():
 - Python 3.8以上
 - SCons
 - C++17対応コンパイラ
-  - Windows: Visual Studio 2019以上
+  - Windows: Visual Studio 2022以上
   - Linux: GCC 9以上
   - macOS: Xcode 12以上
 
