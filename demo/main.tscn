@@ -1,0 +1,76 @@
+[gd_scene load_steps=2 format=3 uid="uid://bxgxkqf5yxpvr"]
+
+[ext_resource type="Script" path="res://demo/main.gd" id="1_8xnm2"]
+
+[node name="Main" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1_8xnm2")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+theme_override_constants/separation = 20
+
+[node name="Title" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "GodotPiper TTS Demo"
+horizontal_alignment = 1
+
+[node name="TextInput" type="TextEdit" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "Enter text to synthesize..."
+wrap_mode = 1
+
+[node name="SpeakerControls" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="SpeakerLabel" type="Label" parent="VBoxContainer/SpeakerControls"]
+layout_mode = 2
+custom_minimum_size = Vector2(100, 0)
+text = "Speaker: 0"
+
+[node name="SpeakerSlider" type="HSlider" parent="VBoxContainer/SpeakerControls"]
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 10.0
+step = 1.0
+
+[node name="SpeedControls" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="SpeedLabel" type="Label" parent="VBoxContainer/SpeedControls"]
+layout_mode = 2
+custom_minimum_size = Vector2(100, 0)
+text = "Speed: 1.0x"
+
+[node name="SpeedSlider" type="HSlider" parent="VBoxContainer/SpeedControls"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.5
+max_value = 2.0
+step = 0.1
+value = 1.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="SynthesizeButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(150, 40)
+text = "Synthesize"
+
+[node name="PlayButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(150, 40)
+text = "Play Audio"
+
+[node name="StatusLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Status: Initializing..."
+horizontal_alignment = 1
